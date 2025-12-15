@@ -1,12 +1,7 @@
-# ¡Por supuesto\! Aquí tienes el `README.md` completo, formateado en Markdown, incluyendo todas las secciones requeridas para tu Trabajo Práctico Integrador y utilizando las convenciones de nombres de tu modelo (`fact_mediciones`, `dim_person`, etc.).
-
-Este documento está listo para ser copiado y pegado en tu repositorio de GitHub.
-
------
 
 # 🏋️ Análisis de Bienestar y Hábitos Saludables en la Compañía
 
-## 📄 Descripción General
+## 📄 Descripción General 
 
 Este proyecto integra y analiza datos de seguimiento de fitness, salud y nutrición (`STATUSWELLBEING final.csv`) para generar *insights* estratégicos. El análisis está enfocado en el área de **Recursos Humanos (RR. HH.)** para evaluar el impacto de los hábitos de los empleados en su bienestar, productividad y salud.
 
