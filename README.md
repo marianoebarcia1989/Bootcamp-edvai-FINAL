@@ -148,7 +148,7 @@ Ref: fact_mediciones.date_key > dim_date.date_key
 ## 🌊 Transformación y Carga de Datos: Pipeline de Datos
 
 El flujo de datos sigue un proceso ETL que se realiza completamente en el **Editor de Power Query** para garantizar la limpieza, dimensionalización y creación de claves subrogadas.
-
+<img width="301" height="168" alt="Diseño sin título (5)" src="https://github.com/user-attachments/assets/665894a3-cac4-4186-86b7-5795449ef9d1" />
 ### Proceso ETL (Power Query - Lenguaje M)
 
 1. **Limpieza de Datos:** Corrección de formatos de texto (reemplazo de `,` por `.`), tipificación de datos numéricos y corrección del nombre de la columna `Weight _kg`.
@@ -156,6 +156,7 @@ El flujo de datos sigue un proceso ETL que se realiza completamente en el **Edit
 3. **Generación de Claves:** Creación de Claves Primarias (Índices) en las dimensiones y Claves Foráneas en la tabla de hechos (`fact_mediciones`) mediante operaciones de *Merge*.
 
 ### 📶 Modelo de datos en Power BI
+
 
 La correcta configuración del Modelo Estrella es crucial. Todas las relaciones son **activa, unidireccional** y de **uno a muchos (1:N)**, asegurando que los filtros y las métricas DAX se propaguen correctamente desde las dimensiones hacia la tabla de hechos.
 
@@ -180,6 +181,6 @@ La correcta configuración del Modelo Estrella es crucial. Todas las relaciones 
 
 | Recurso | Enlace |
 | --- | --- |
-| **Dashboard Power BI** | [INSERTAR LINK AL DASHBOARD PUBLICADO AQUÍ] |
+| **Dashboard Power BI** | [[INSERTAR LINK AL DASHBOARD PUBLICADO AQUÍ]](https://app.powerbi.com/groups/me/reports/73321080-e9d9-40d0-85a9-47b7f721ea69/70d1634e2269bbb76948?experience=power-bi) |
 | **Archivo .pbix** | [INSERTAR LINK PARA DESCARGA DEL .pbix AQUÍ] |
 | **Archivo CSV (Data Source)** | [STATUSWELLBEING final.csv](STATUSWELLBEING final.csv) |
