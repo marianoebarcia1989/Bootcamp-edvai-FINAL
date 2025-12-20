@@ -96,6 +96,8 @@ SWITCH (
 
 El archivo de origen está delimitado por `;`. La complejidad principal radica en la alta dimensionalidad y la necesidad de corrección en el formato y nombre de algunas columnas clave (`Weight _kg`).
 
+---
+
 ### 🔗 Diagrama Entidad-Relación (DER) / Código en dbdiagram.io
 
 El modelo implementado en Power BI sigue un **Esquema Estrella**, lo que permite una navegación fluida y un rendimiento óptimo de las medidas DAX.
@@ -146,6 +148,7 @@ Ref: fact_mediciones.date_key > dim_date.date_key
 
 ---
 
+---
 # 🌊 Transformación y Carga de Datos: Pipeline de Datos
 
 El flujo de datos sigue un proceso ETL que se realiza completamente en el **Editor de Power Query** para garantizar la limpieza, dimensionalización y creación de claves subrogadas.
@@ -155,6 +158,7 @@ El flujo de datos sigue un proceso ETL que se realiza completamente en el **Edit
 1. **Limpieza de Datos:** Corrección de formatos de texto (reemplazo de `,` por `.`), tipificación de datos numéricos y corrección del nombre de la columna `Weight _kg`.
 2. **Dimensionalización:** Creación de consultas separadas para `dim_person`, `dim_meal`, y `dim_date`.
 3. **Generación de Claves:** Creación de Claves Primarias (Índices) en las dimensiones y Claves Foráneas en la tabla de hechos (`fact_mediciones`) mediante operaciones de *Merge*.
+
 ---
 
 ## 📶 Modelo de datos en Power BI
