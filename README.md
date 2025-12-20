@@ -148,11 +148,11 @@ Ref: fact_mediciones.date_key > dim_date.date_key
 
 ---
 
----
-# 🌊 Transformación y Carga de Datos: Pipeline de Datos
+### 🌊 Transformación y Carga de Datos: Pipeline de Datos
 
 El flujo de datos sigue un proceso ETL que se realiza completamente en el **Editor de Power Query** para garantizar la limpieza, dimensionalización y creación de claves subrogadas.
 <img width="501" height="368" alt="Diseño sin título (5)" src="https://github.com/user-attachments/assets/665894a3-cac4-4186-86b7-5795449ef9d1" />
+
 ### Proceso ETL (Power Query - Lenguaje M)
 
 1. **Limpieza de Datos:** Corrección de formatos de texto (reemplazo de `,` por `.`), tipificación de datos numéricos y corrección del nombre de la columna `Weight _kg`.
@@ -161,7 +161,7 @@ El flujo de datos sigue un proceso ETL que se realiza completamente en el **Edit
 
 ---
 
-## 📶 Modelo de datos en Power BI
+### 📶 Modelo de datos en Power BI
 
 La correcta configuración del Modelo Estrella es crucial. Todas las relaciones son **activa, unidireccional** y de **uno a muchos (1:N)**, asegurando que los filtros y las métricas DAX se propaguen correctamente desde las dimensiones hacia la tabla de hechos.
 
