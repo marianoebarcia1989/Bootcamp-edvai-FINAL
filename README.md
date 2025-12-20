@@ -99,15 +99,14 @@ El archivo de origen está delimitado por `;`. La complejidad principal radica e
 ### 🔗 Diagrama Entidad-Relación (DER) / Código en dbdiagram.io
 
 El modelo implementado en Power BI es un **Esquema Estrella**, ideal para el análisis jerárquico y el rendimiento de las consultas.
+<img width="956" height="660" alt="Untitled (1)" src="https://github.com/user-attachments/assets/53c35738-eb8f-456e-9597-002840808afc" />
 
-```sql
-// Esquema Star para Health & Wellness Analytics
 Table dim_person {
   person_key INT [pk]
   Age INT
   Gender VARCHAR
   Experience_Level VARCHAR
-  Segmento_Etario VARCHAR // Columna Calculada
+  Segmento_Etario VARCHAR 
 }
 
 Table dim_meal {
@@ -124,24 +123,23 @@ Table dim_date {
 
 Table fact_mediciones {
   fact_mediciones_id INT [pk] 
-  person_key INT [fk]
-  meal_key INT [fk]
-  date_key INT [fk]
+  person_key INT 
+  meal_key INT 
+  date_key INT 
 
   Calories_Burned DECIMAL
   Session_Duration_hours DECIMAL
-  Weight_kg DECIMAL // Nombre de columna limpiado
+  Weight_kg DECIMAL 
   BMI DECIMAL
   Fat_Percentage DECIMAL
-  Workout_Frequency _days_week DECIMAL
-  Clasificacion_BMI VARCHAR // Columna Calculada
+  "Workout_Frequency _days_week" DECIMAL // Nombre entre comillas por el espacio
+  Clasificacion_BMI VARCHAR 
 }
 
+// Relaciones (Estas líneas son las que crean visualmente las FK)
 Ref: fact_mediciones.person_key > dim_person.person_key
 Ref: fact_mediciones.meal_key > dim_meal.meal_key
 Ref: fact_mediciones.date_key > dim_date.date_key
-
-```
 
 ---
 
