@@ -1,3 +1,4 @@
+
 # 🏆 Proyecto Final: Análisis Estratégico de Bienestar y Hábitos Saludables
 
 ## 🌟 Descripción General
@@ -15,7 +16,7 @@ El objetivo principal es responder a las hipótesis de negocio mediante la creac
 
 ## 💼 Caso de Estudio: Wellness Corporativo
 
-La empresa busca optimizar la salud de sus empleados y por ende su calidad de vida y productividad. El análisis se enfoca en segmentar a la población por demografía (edad, género, alimentación y actividad física) para identificar dónde se están logrando los mejores resultados de y dónde se requieren programas de intervención focalizados.
+La empresa busca optimizar la salud de sus empleados y por ende su calidad de vida y productividad. El análisis se enfoca en segmentar a la población por demografía (edad, género, alimentación y actividad física) para identificar dónde se están logrando los mejores resultados y dónde se requieren programas de intervención focalizados.
 
 ---
 
@@ -96,16 +97,13 @@ SWITCH (
 
 El archivo de origen está delimitado por `;`. La complejidad principal radica en la alta dimensionalidad y la necesidad de corrección en el formato y nombre de algunas columnas clave (`Weight _kg`).
 
----
-
-### 🔗 Diagrama Entidad-Relación (DER) / Código en dbdiagram.io
+### 🔗 Diagrama Entidad-Relación (DER)
 
 El modelo implementado en Power BI sigue un **Esquema Estrella**, lo que permite una navegación fluida y un rendimiento óptimo de las medidas DAX.
 
-<img width="956" height="660" alt="Untitled (1)" src="https://github.com/user-attachments/assets/84234598-8161-449e-b407-33113051d789" />
+<img width="956" alt="Diagrama Entidad Relación" src="https://github.com/user-attachments/assets/84234598-8161-449e-b407-33113051d789" />
 
-### Código en dbdiagram.io
- [dbdiagram.io](https://dbdiagram.io):
+#### Código en dbdiagram.io:
 
 ```sql
 Table dim_person {
@@ -146,12 +144,15 @@ Ref: fact_mediciones.person_key > dim_person.person_key
 Ref: fact_mediciones.meal_key > dim_meal.meal_key
 Ref: fact_mediciones.date_key > dim_date.date_key
 
+```
+
 ---
 
 ### 🌊 Transformación y Carga de Datos: Pipeline de Datos
 
-El flujo de datos sigue un proceso ETL que se realiza completamente en el **Editor de Power Query** para garantizar la limpieza, dimensionalización y creación de claves subrogadas.
-<img width="501" height="368" alt="Diseño sin título (5)" src="https://github.com/user-attachments/assets/665894a3-cac4-4186-86b7-5795449ef9d1" />
+El flujo de datos sigue un proceso ETL realizado en el **Editor de Power Query** para garantizar la limpieza, dimensionalización y creación de claves subrogadas.
+
+<img width="501" alt="Pipeline de Datos" src="https://github.com/user-attachments/assets/665894a3-cac4-4186-86b7-5795449ef9d1" />
 
 ### Proceso ETL (Power Query - Lenguaje M)
 
@@ -161,36 +162,39 @@ El flujo de datos sigue un proceso ETL que se realiza completamente en el **Edit
 
 ---
 
-### 📶 Modelo de datos en Power BI
+## 📶 Modelo de Datos en Power BI
 
-La correcta configuración del Modelo Estrella es crucial. Todas las relaciones son **activa, unidireccional** y de **uno a muchos (1:N)**, asegurando que los filtros y las métricas DAX se propaguen correctamente desde las dimensiones hacia la tabla de hechos.
+La correcta configuración del Modelo Estrella es crucial. Todas las relaciones son **activas, unidireccionales** y de **uno a muchos (1:N)**, asegurando que los filtros y las métricas DAX se propaguen correctamente desde las dimensiones hacia la tabla de hechos.
 
 ---
 
-### 📝 Conclusiones
+## 📝 Conclusiones
 
-### Validación de Hipótesis
+## Validación de Hipótesis
 
-* **H1 (Edad vs. Rendimiento):** **Rechazada**. Los datos no muestran una ventaja clara para el grupo de usuarios más jóvenes. El análisis de `Calorias_Quemadas_Promedio_Sesion` revela un promedio equilibrado entre el grupo Joven y el grupo Senior.
-* **H3 (BMI y Dieta):** Se valida una fuerte correlación entre las categorías de dieta y la `Clasificacion_BMI`, siendo un factor clave para la categorización de salud.
+* **H1 (Edad vs. Rendimiento):** **Rechazada**. Los datos no muestran una ventaja clara para el grupo de usuarios más jóvenes. El análisis revela un promedio equilibrado entre el grupo Joven y el grupo Senior.
+* **H3 (BMI y Dieta):** **Validada**. Se confirma una fuerte relación entre las categorías de dieta y la `Clasificacion_BMI`.
 
-### Insights de RR. HH. y Propuestas de Acción 2026
+## Insights de RR. HH. y Propuestas de Acción 2026
 
 * **Prioridad Joven:** Se detectó que el **37% de los jóvenes menores de 30 años** posee un porcentaje de sobrepeso superior al de las personas mayores de 35 años.
-* **Oportunidad de Intervención:** Esta anomalía nos llevará a la creación de planes de acción 2026 para el bienestar de nuestros empleados. Identificamos como oportunidad la creación de **nuevas actividades y beneficios nutricionales para los jóvenes menores de 30 años**.
-* **Objetivo Estratégico:** El grupo Joven es la categoría de edades que deberá lograr el objetivo más alto de quema de grasa, lo que justifica una campaña nutricional y de *fitness* focalizada en ellos.
+* **Oportunidad de Intervención:** Esto impulsará la creación de planes de acción para 2026, enfocados en **nuevas actividades y beneficios nutricionales para los jóvenes**, dado que son el grupo con mayor potencial de mejora en quema de grasa.
+
+---
+
+## 📸 Vista Previa del Dashboard
+![Diapositiva4](https://github.com/user-attachments/assets/390d4fa1-f2b0-4657-96e0-0fa06a8426bb)
+![Diapositiva3](https://github.com/user-attachments/assets/4d11a417-341f-4080-b485-7fddb818d1d0)
+![Diapositiva2](https://github.com/user-attachments/assets/0e1de4f2-eb46-482e-8f2e-f38a189cbb6c)
+![Diapositiva1](https://github.com/user-attachments/assets/195a0ce9-9ea8-4120-b731-9aa267946652)
 
 ---
 
 ## 🔗 Links
 
 | Recurso | Enlace |
-| --- | --- |![Diapositiva1](https://github.com/user-attachments/assets/df8df8b2-5d84-42dc-bf71-b51ff2ec7731)
-![Diapositiva2](https://github.com/user-attachments/assets/6adc1847-f80f-4d0d-9ce4-11aaab68aeb1)
-![Diapositiva3](https://github.com/user-attachments/assets/ea129a3e-17bc-4be3-b90a-df1ae0493693)
-![Diapositiva4](https://github.com/user-attachments/assets/27b37209-0345-451e-8271-0c83a68c4f74)
-
-* **Dashboard Interactivo:** [Ver Dashboard en Power BI Service](https://app.powerbi.com/view?r=eyJrIjoiYTc4NDYzOGQtMjhjYS00NGI1LTg5MzUtZjc1YTJiZWRiYWJkIiwidCI6IjUyMWU0MzBmLWJhM2MtNGQ0Ny05Zjk3LTE2Yjk0NWIwYTg1MCIsImMiOjR9)
-* **Repositorio de Datos Archivo CSV (Data Source) :** [Dataset Original en GitHub](https://github.com/tu_usuario/tu_repositorio/blob/main/STATUSWELLBEING%20final.csv)
-| **Dashboard Power BI Interactivo** | * [Ver Dashboard en Power BI Service] 
-
+| --- | --- |
+| **Dashboard Power BI Interactivo** | [Ver Dashboard en Power BI Service](https://app.powerbi.com/view?r=eyJrIjoiYTc4NDYzOGQtMjhjYS00NGI1LTg5MzUtZjc1YTJiZWRiYWJkIiwidCI6IjUyMWU0MzBmLWJhM2MtNGQ0Ny05Zjk3LTE2Yjk0NWIwYTg1MCIsImMiOjR9) |
+| **Repositorio de Datos (CSV):** | [Descargar STATUSWELLBEING final.csv](https://github.com/TU_USUARIO/NOMBRE_DE_TU_REPOSITORIO/blob/main/STATUSWELLBEING%20final.csv) |                                                                
+ 
+```
