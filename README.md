@@ -101,6 +101,7 @@ El archivo de origen está delimitado por `;`. La complejidad principal radica e
 El modelo implementado en Power BI es un **Esquema Estrella**, ideal para el análisis jerárquico y el rendimiento de las consultas.
 <img width="956" height="660" alt="Untitled (1)" src="https://github.com/user-attachments/assets/53c35738-eb8f-456e-9597-002840808afc" />
 
+---
 Table dim_person {
   person_key INT [pk]
   Age INT
