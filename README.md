@@ -190,10 +190,10 @@ La correcta configuración del Modelo Estrella es crucial. Todas las relaciones 
 
 ---
 
-## 🔗 Links
+## 🔗 Links del Proyecto
 
 | Recurso | Enlace |
-| --- | --- |
+| :--- | :--- |
 | **Dashboard Power BI Interactivo** | [Ver Dashboard en Power BI Service](https://app.powerbi.com/view?r=eyJrIjoiYTc4NDYzOGQtMjhjYS00NGI1LTg5MzUtZjc1YTJiZWRiYWJkIiwidCI6IjUyMWU0MzBmLWJhM2MtNGQ0Ny05Zjk3LTE2Yjk0NWIwYTg1MCIsImMiOjR9) |
-| **Repositorio de Datos (CSV):** | [Descargar STATUSWELLBEING final.csv](https://github.com/TU_USUARIO/NOMBRE_DE_TU_REPOSITORIO/blob/main/STATUSWELLBEING%20final.csv) |                                                    
-```
+| **Repositorio de Datos (CSV)** | [Consultar STATUSWELLBEING final.csv](https://raw.githubusercontent.com/marianoebarcia1989/Bootcamp-edvai-FINAL-Mariano-Barcia/main/STATUSWELLBEING%20final.csv) |
+| **Archivo de Proyecto (.pbix)** | [Descargar DASHBOARD BIENESTAR RRHH.pbix](https://github.com/marianoebarcia1989/Bootcamp-edvai-FINAL-Mariano-Barcia/blob/main/DASHBOARD%20BIENESTAR%20RRHH.pbix) |
